@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
+use App\Http\Requests\StoreEvent;
 
 class EventController extends Controller
 {
@@ -16,11 +17,9 @@ class EventController extends Controller
         return view('events.add');
     }
 
-    public function store(Request $request) {
-        $event = new Event();
-        $event->name = $request->name;
-        $event->body = $request->body;
-        $event->save();
+    public function store(StoreEvent $request) {        
+        $event = new Event();                 
+        $event->create($request->all());
         return redirect('/events');
     } 
 }
