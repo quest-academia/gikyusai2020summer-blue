@@ -24,7 +24,7 @@
     @endif
     <div>
         <label for="detail">イベント詳細</label>
-        <input type="text" name="detail">
+        <textarea name="detail"></textarea>
     </div>
     @if ($errors->has('start_datetime'))
         <div class="alert alert-danger">
