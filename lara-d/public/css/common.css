@@ -1,0 +1,81 @@
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article, header, footer, aside, figure, figcaption, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+ol, ul {
+    list-style: none;
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+.error-message {
+    color: #dc3545;
+}
+
+.event-form {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.form-header {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.form-body {
+    padding: 10px 20px 20px;
+}
+
+.input-box {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-form {
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:768px) {
+    .submit-btn {
+        width: 100%;
+    }
+}
