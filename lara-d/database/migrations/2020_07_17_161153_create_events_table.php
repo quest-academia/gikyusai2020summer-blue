@@ -20,8 +20,7 @@ class CreateEventsTable extends Migration
             $table->dateTime('start_datetime');
             $table->dateTime('end_datetime');
             $table->integer('number_of_members');
-            $table->string('url',255);    
-            $table->softDeletes();
+            $table->string('url',255);
             $table->timestamps();
         });
     }
