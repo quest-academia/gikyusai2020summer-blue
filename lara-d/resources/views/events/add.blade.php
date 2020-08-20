@@ -6,9 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link href="{{asset('css/common.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-datetimepicker@2.5.20/jquery.datetimepicker.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-datetimepicker@2.5.20/build/jquery.datetimepicker.full.min.js"></script>
+        <script>
+            $(function(){
+                $(".datetimepicker").datetimepicker();
+            });
+        </script>
     </head>
-    <body>
-        
+    <body>   
         <form class="event-form" method="POST" action="/events/create">
             {{ csrf_field() }} 
             <div class="form-header">
@@ -43,7 +51,7 @@
                 @endif
                 <div class="input-box">
                     <label for="start_datetime">開始時間</label>
-                    <input class="input-form" type="datetime-local" name="start_datetime">
+                    <input class="input-form datetimepicker" type="text" name="start_datetime">
                 </div>
                 @if ($errors->has('start_datetime'))
                     <div class="alert alert-danger">
@@ -56,7 +64,7 @@
                 @endif
                 <div class="input-box">
                     <label for="end_datetime">終了時間</label>
-                    <input class="input-form" type="datetime-local" name="end_datetime">
+                    <input class="input-form datetimepicker" type="text" name="end_datetime">
                 </div>
                 @if ($errors->has('end_datetime'))
                     <div class="alert alert-danger">

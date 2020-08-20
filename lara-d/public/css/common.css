@@ -33,13 +33,18 @@ body {
     background-color: #f4f6f9;
 }
 
+header {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
 .error-message {
     color: #dc3545;
 }
 
 .event-form {
     width: 70%;
-    margin: 0 auto;
+    margin: 30px auto 0;
     background-color: #fff;
 }
 
