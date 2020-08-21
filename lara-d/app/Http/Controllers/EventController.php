@@ -10,7 +10,7 @@ class EventController extends Controller
 {
     public function index(Request $request)
     {
-        $events = Event::ascStartDatetime();
+        $events = Event::future()->sort()->get();
         return $events;
     }
 

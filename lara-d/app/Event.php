@@ -15,11 +15,15 @@ class Event extends Model
         'url',
     ];
 
-    public function scopeAscStartDatetime($query)
+    public static function scopeFuture($query)
     {
         return $query
-            ->where('start_datetime', '>=', NOW())
-            ->orderBy('start_datetime', 'asc')
-            ->get();
+            ->where('start_datetime', '>=', NOW());
+    }
+
+    public static function scopeSort($query)
+    {
+        return $query
+            ->orderBy('start_datetime', 'asc');
     }
 }
