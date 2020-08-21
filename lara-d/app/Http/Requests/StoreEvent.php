@@ -24,12 +24,12 @@ class StoreEvent extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|max:20',
             'detail' => 'required',
-            'start_datetime' => 'required',
-            'end_datetime' => 'required',
-            'number_of_members' => 'required',
-            'url' => 'required',
+            'start_datetime' => 'required|date_format:Y/m/d H:i|after_or_equal:now',
+            'end_datetime' => 'required|date_format:Y/m/d H:i|after:start_datetime',
+            'number_of_members' => 'required|numeric|min:1',
+            'url' => 'required|max:255|url',
         ];
     }
 }
