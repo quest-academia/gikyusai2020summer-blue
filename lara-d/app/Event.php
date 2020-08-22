@@ -21,7 +21,7 @@ class Event extends Model
             ->where('start_datetime', '>=', NOW());
     }
 
-    public static function scopeSort($query)
+    public static function scopeAscStartDatetime($query)
     {
         return $query
             ->orderBy('start_datetime', 'asc');
