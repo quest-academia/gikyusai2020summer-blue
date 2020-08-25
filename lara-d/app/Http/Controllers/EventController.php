@@ -30,4 +30,9 @@ class EventController extends Controller
         $event->create($request->all());
         return redirect('/events');
     }
+
+    public function show(Event $event)
+    {
+        return view('events.show')->with('event', $event);
+    }
 }
