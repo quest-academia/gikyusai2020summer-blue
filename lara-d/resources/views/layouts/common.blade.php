@@ -8,13 +8,13 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{asset('css/common.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-datetimepicker@2.5.20/jquery.datetimepicker.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-datetimepicker@2.5.20/build/jquery.datetimepicker.full.min.js"></script>
-        <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-datetimepicker@2.5.20/build/jquery.datetimepicker.full.min.js" defer></script>
+        <!-- Scripts -->
 
-        <script>
+        <script type="module">
             $(function(){
                 $(".datetimepicker").datetimepicker();
             });
@@ -73,7 +73,7 @@
         </nav>
         <main class="py-4">
             @yield('content')
-        </main>            
+        </main>
     </body>
 
 </html>
