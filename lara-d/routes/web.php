@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/events', 'EventController@index');
-Route::get('events/{event}', 'EventController@show');
 Route::get('/events/add', 'EventController@add');
+Route::get('events/{event}', 'EventController@show');
 Route::post('/events/create', 'EventController@store');
 
 Auth::routes();
