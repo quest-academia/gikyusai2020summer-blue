@@ -11,6 +11,7 @@ class EventController extends Controller
     public function index(Request $request)
     {
         $events = Event::future()->ascStartDatetime()->get();
+        var_dump($request);die;
         return view('events.index')->with('events', $events);
     }
 
