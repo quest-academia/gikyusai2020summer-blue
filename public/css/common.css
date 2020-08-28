@@ -1,4 +1,24 @@
-html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,7 +30,14 @@ html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table,
     box-sizing: border-box;
 }
 
-article, header, footer, aside, figure, figcaption, nav, section {
+article,
+header,
+footer,
+aside,
+figure,
+figcaption,
+nav,
+section {
     display: block;
 }
 
@@ -20,13 +47,19 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
     list-style-type: none;
 }
 
 li {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 body {
@@ -36,6 +69,11 @@ body {
 header {
     background-color: #ffffff;
     padding: 20px;
+}
+
+input[type=text],
+textarea {
+    font-size: 18px;
 }
 
 .error-message {
@@ -50,7 +88,7 @@ header {
 
 .form-header {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #3490dc;
     color: #fff;
 }
 
@@ -70,10 +108,12 @@ header {
     width: 100%;
 }
 
-.submit-btn {
+.submit-btn,
+.show-btn,
+.prev-btn {
     margin-top: 15px;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #3490dc;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -83,4 +123,54 @@ header {
     .submit-btn {
         width: 100%;
     }
+
+    #event-index {
+        width: 90%;
+    }
+}
+
+.event-box {
+    width: 70%;
+    margin: 30px auto 0;
+    background-color: #fff;
+}
+
+.event-header {
+    padding: 10px;
+    background-color: #3490dc;
+    color: #fff;
+}
+
+.event-body {
+    padding: 10px 20px 20px;
+}
+
+.event-body .item:not(:first-child) {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: unset;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+tr {
+    text-align: center;
+}
+
+.pagination-box {
+    width: max-content;
+}
+
+.show-btn:hover,
+.prev-btn:hover {
+    text-decoration: none;
+    color: #ffffff;
 }

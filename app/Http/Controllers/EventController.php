@@ -8,10 +8,9 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-
     public function index(Request $request)
     {
-        $events = Event::future()->ascStartDatetime()->get();
+        $events = Event::future()->ascStartDatetime()->paginate(5);
         return view('events.index')->with('events', $events);
     }
 
@@ -25,5 +24,10 @@ class EventController extends Controller
         $event = new Event();
         $event->create($request->all());
         return redirect('/events');
+    }
+
+    public function show(Event $event)
+    {
+        return view('events.show')->with('event', $event);
     }
 }
