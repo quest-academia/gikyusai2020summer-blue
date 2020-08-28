@@ -10,8 +10,7 @@ class EventController extends Controller
 {
     public function index(Request $request)
     {
-        var_dump(1);die;
-        $events = Event::future()->ascStartDatetime()->paginate(5);
+        $events = Event::future()->ascStartDatetime()->get();
         return view('events.index')->with('events', $events);
     }
 
