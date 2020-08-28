@@ -1,15 +1,27 @@
 version: "3"
 services:
+  flont:
+    build:
+      context: ./flont
+    ports:
+      - 8888:8080
+    volumes:
+      - ./flont_app:/opt/flont_app
+    links:
+      - web
+    tty: true
+    stdin_open: true
+    command: /bin/bash
   web:
     build:
       context: ./apache-php
-    ports: 
+    ports:
       - 80:80
     privileged: true
     links:
       - db
     volumes:
-      - "./:/var/www/html"
+      - "./lara-d/:/var/www/html"
       - "./apache-php/apache.conf:/etc/httpd/conf/httpd.conf"
     container_name: "apache-php"
   db:
@@ -28,4 +40,4 @@ services:
       - PMA_HOST=db
       - PMA_USER=root
       - PMA_PASSWORD=root
-    container_name: "phpmyamin-la"
+    container_name: "phpmyadmin-la"
