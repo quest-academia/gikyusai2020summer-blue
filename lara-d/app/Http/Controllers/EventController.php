@@ -8,14 +8,9 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index(Request $request)
     {
-        $events = Event::future()->ascStartDatetime()->get();
+        $events = Event::future()->ascStartDatetime()->paginate(5);
         return view('events.index')->with('events', $events);
     }
 
