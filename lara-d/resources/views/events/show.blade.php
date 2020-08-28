@@ -24,6 +24,9 @@
         <div class="item">
             <div>URL：{{$event->url}}</div>
         </div>
+        <div class="my-4"> 
+            <a class="prev-btn" href="{{action('EventController@index')}}">戻る</a>
+        </div>
     </div>
 </div>
 @endsection
