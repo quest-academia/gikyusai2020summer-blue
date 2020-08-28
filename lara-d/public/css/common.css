@@ -29,6 +29,11 @@ li {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
 body {
     background-color: #f4f6f9;
 }
@@ -38,7 +43,7 @@ header {
     padding: 20px;
 }
 
-input[type=text] {
+input[type=text], textarea {
     font-size: 18px;
 }
 
@@ -54,7 +59,7 @@ input[type=text] {
 
 .form-header {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #3490dc;
     color: #fff;
 }
 
@@ -74,10 +79,10 @@ input[type=text] {
     width: 100%;
 }
 
-.submit-btn {
+.submit-btn, .show-btn, .prev-btn {
     margin-top: 15px;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #3490dc;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -86,6 +91,9 @@ input[type=text] {
 @media screen and (max-width:768px) {
     .submit-btn {
         width: 100%;
+    }
+    #event-index {
+        width: 90%;
     }
 }
 
@@ -97,7 +105,7 @@ input[type=text] {
 
 .event-header {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #3490dc;
     color: #fff;
 }
 
@@ -107,4 +115,29 @@ input[type=text] {
 
 .event-body .item:not(:first-child) {
     margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: unset;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+tr {
+    text-align: center;
+}
+
+.pagination-box {
+    width: max-content;
+}
+
+.show-btn:hover, .prev-btn:hover {
+    text-decoration: none;
+    color: #ffffff;
 }
