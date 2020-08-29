@@ -94,7 +94,7 @@
     <script type="text/javascript" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js">
         liff.init(
             {
-            liffId: '1654807188-DerxZj1y'
+            liffId: '1654879471-B8Qy9KK7'
             }
             ).then(() => {
                 if (!liff.isLoggedIn()) {
