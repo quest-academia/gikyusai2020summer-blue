@@ -17,6 +17,26 @@
                 $(".datetimepicker").datetimepicker();
             });
         </script>
+        <script type="text/javascript" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js">
+        liff.init(
+            {
+            liffId: '1654879471-B8Qy9KK7'
+            }
+            ).then(() => {
+                if (!liff.isLoggedIn()) {
+                liff.login();
+            }
+                document.getElementById('send').addEventListener('click', send);
+                })
+            };
+
+            function send() {
+                liff.shareTargetPicker([{
+                'type': 'text',
+                'text': 'イベントが投稿されました'
+                }])
+            }
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
